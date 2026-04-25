@@ -1,0 +1,48 @@
+{
+  "entries": [
+    {
+      "id": "sample-fintech-2024",
+      "start": "2024-04",
+      "end": null,
+      "role": "Backend Engineer（サンプル）",
+      "industry": "フィンテック",
+      "scale": "チーム 8 名 / Scrum",
+      "summary": "決済プラットフォームの API 開発・運用。新機能設計から本番運用まで一気通貫。",
+      "responsibilities": [
+        "新規決済フローの API 設計と実装",
+        "既存サービスのリファクタリング・パフォーマンス改善",
+        "オンコール対応"
+      ],
+      "achievements": [
+        "API 平均応答時間を 30% 短縮",
+        "オンボーディング向け開発者ドキュメントを整備"
+      ],
+      "tech": ["TypeScript", "Node.js", "AWS", "PostgreSQL", "Terraform"]
+    },
+    {
+      "id": "sample-saas-2022",
+      "start": "2022-01",
+      "end": "2024-03",
+      "role": "Full Stack Engineer（サンプル）",
+      "industry": "B2B SaaS",
+      "scale": "チーム 5 名",
+      "summary": "業務 SaaS のフロント / バック横断開発。マイクロサービス分割を主導。",
+      "responsibilities": [
+        "React / Next.js による画面開発",
+        "Go 製マイクロサービスの設計・実装",
+        "CI/CD パイプライン整備"
+      ],
+      "tech": ["TypeScript", "Next.js", "Go", "GCP", "MySQL"]
+    },
+    {
+      "id": "sample-startup-2020",
+      "start": "2020-04",
+      "end": "2021-12",
+      "role": "Web Engineer（サンプル）",
+      "industry": "スタートアップ",
+      "scale": "チーム 3 名",
+      "summary": "シード期スタートアップで MVP のフロント開発から運用まで担当。",
+      "tech": ["JavaScript", "Vue.js", "Firebase"]
+    }
+  ]
+}
