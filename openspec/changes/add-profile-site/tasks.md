@@ -75,11 +75,11 @@
 
 ## 9. デプロイワークフロー
 
-- [ ] 9.1 `.github/workflows/deploy.yml` に `actions/checkout` → Node セットアップ → `npm ci` → `npm run build` → `actions/upload-pages-artifact` → `actions/deploy-pages` を実装
-- [ ] 9.2 ワークフローの `permissions`（`pages: write` / `id-token: write`）と `concurrency`（`pages` グループ）を設定
-- [ ] 9.3 リポジトリ設定で Pages の Source を「GitHub Actions」に切り替える手順を `README.md` に明記
-- [ ] 9.4 過渡期に必要な `NEXT_BASE_PATH` の指定方法（環境変数 / `vars` / 削除手順）を `README.md` に明記
-- [ ] 9.5 `main` への push でデプロイが完走することを実環境で確認
+- [x] 9.1 `.github/workflows/deploy.yml` に checkout → Node セットアップ → `npm ci` → `npm run build` → axe テスト → `upload-pages-artifact` → `deploy-pages` を実装
+- [x] 9.2 ワークフローの `permissions`（`pages: write` / `id-token: write`）と `concurrency`（`pages` グループ）を設定
+- [x] 9.3 リポジトリ設定で Pages の Source を「GitHub Actions」に切り替える手順を `README.md` に明記（README は Group 10 で作成）
+- [x] 9.4 過渡期に必要な `NEXT_BASE_PATH` の指定方法（環境変数 / `vars` / 削除手順）を `README.md` に明記（同上）
+- [ ] 9.5 `main` への push でデプロイが完走することを実環境で確認（**ユーザー作業**: `main` push 後に Actions ログを確認）
 
 ## 10. ドキュメントと運用整備
 
