@@ -2,12 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-paper: #ffffff;
+  --color-panel: #f7f7f7;
+  --color-line: #e9e7e2;
+  --color-ink: #2a2a2a;
+  --color-ink-soft: #4f4f4f;
+  --color-ink-mute: #8a8a8a;
+  --color-primary: #ff8a3d;
+  --color-primary-strong: #ff6b1a;
+  --color-primary-soft: #fff1e3;
+  --color-accent: #ffcd3c;
+  --color-accent-soft: #fff5cf;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
 }
 
 body {
-  font-family: ui-sans-serif, system-ui, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
+  font-family: ui-sans-serif, system-ui, "Hiragino Maru Gothic ProN",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo,
+    sans-serif;
+  font-feature-settings: "palt";
+  letter-spacing: 0.01em;
+  line-height: 1.75;
+}
+
+::selection {
+  background-color: var(--color-accent-soft);
+  color: var(--color-ink);
+}
+
+@layer components {
+  .blob-card {
+    border-radius: theme("borderRadius.blob");
+    background-color: var(--color-paper);
+    box-shadow: 0 8px 24px -16px rgba(0, 0, 0, 0.18);
+    border: 1px solid var(--color-line);
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.95rem;
+    border-radius: 999px;
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary-strong);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+
+  .pill-accent {
+    background-color: var(--color-accent-soft);
+    color: #8a6a00;
+  }
+
+  .pill-mute {
+    background-color: var(--color-panel);
+    color: var(--color-ink-soft);
+  }
 }
