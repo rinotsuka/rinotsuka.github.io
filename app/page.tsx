@@ -1,10 +1,20 @@
+import { CareerTimeline } from "@/components/career/Timeline";
+
 export default function HomePage() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
-      <h1 className="font-display text-4xl text-base-ink">RINOTSUKA</h1>
-      <p className="mt-4 text-base-muted">
-        development engineer — profile site (under construction)
-      </p>
-    </main>
+    <>
+      <section className="mx-auto max-w-3xl px-6 pt-20 pb-8">
+        <p className="text-sm uppercase tracking-[0.3em] text-accent-deep">
+          development engineer
+        </p>
+        <h1 className="mt-3 font-display text-5xl leading-tight text-base-ink">
+          RINOTSUKA
+        </h1>
+        <p className="mt-4 text-base text-base-ink/90">
+          採用担当・コミュニティ・知人へ向けた、ふんわり読める職務経歴とブログの場所。
+        </p>
+      </section>
+      <CareerTimeline />
+    </>
   );
 }

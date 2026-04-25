@@ -28,14 +28,14 @@
 
 ## 4. 経歴データとタイムライン
 
-- [ ] 4.1 `lib/career/schema.ts` に Zod スキーマ（CareerEntry / Role）を定義
-- [ ] 4.2 `lib/career/load.ts` で `content/career.json` を読み込み、Zod でビルド時検証
-- [ ] 4.3 `content/career.json` の最小サンプルデータ（1 案件 + 2 roles）を作成し、ビルド成功を確認
-- [ ] 4.4 `content/raw/career.md` に雑書きの一次データを置く運用を README / `docs/career-update.md` に明記
-- [ ] 4.5 `components/career/Timeline.tsx`（縦軸タイムライン）と `components/career/CareerCard.tsx`（案件ブロック + roles 連続表示）を実装
-- [ ] 4.6 「現在進行中（`end: null`）」の表記処理を共通ユーティリティ化（`lib/career/format.ts`）
-- [ ] 4.7 `start` 降順ソートと `roles` 内の昇順ソートをロード層で実施
-- [ ] 4.8 `app/page.tsx` に Career タイムラインセクションを組み込む
+- [x] 4.1 `lib/career/schema.ts` に Zod スキーマ（CareerEntry / Role）を定義
+- [x] 4.2 `lib/career/load.ts` で `content/career.json` を読み込み、Zod でビルド時検証
+- [x] 4.3 `content/career.json` の最小サンプルデータ（1 案件 + 2 roles）を作成し、ビルド成功を確認
+- [x] 4.4 `content/raw/career.md` に雑書きの一次データを置く運用を README / `docs/career-update.md` に明記（README/docs は Group 10 で記載）
+- [x] 4.5 `components/career/Timeline.tsx`（縦軸タイムライン）と `components/career/CareerCard.tsx`（案件ブロック + roles 連続表示）を実装
+- [x] 4.6 「現在進行中（`end: null`）」の表記処理を共通ユーティリティ化（`lib/career/format.ts`）
+- [x] 4.7 `start` 降順ソートと `roles` 内の昇順ソートをロード層で実施
+- [x] 4.8 `app/page.tsx` に Career タイムラインセクションを組み込む
 
 ## 5. Profile セクション
 

@@ -1,0 +1,49 @@
+[
+  {
+    "company": "株式会社サンプル",
+    "project": "新規 SaaS プロダクト開発",
+    "start": "2023-04",
+    "end": null,
+    "summary": "B2B SaaS の立ち上げメンバーとしてプロダクト開発を主導。",
+    "roles": [
+      {
+        "title": "ソフトウェアエンジニア",
+        "start": "2023-04",
+        "end": "2024-09",
+        "summary": "React / Next.js / TypeScript によるフロントエンド実装と API 連携。",
+        "highlights": [
+          "ゼロベースで初期 UI 設計とコンポーネントライブラリを構築",
+          "ユーザーオンボーディング体験の改善で継続率を改善"
+        ]
+      },
+      {
+        "title": "テックリード",
+        "start": "2024-10",
+        "end": null,
+        "summary": "技術選定・設計レビュー・採用に関与しながら実装も継続。",
+        "highlights": [
+          "複数チームでの設計指針の共通化",
+          "インフラ設計と CI/CD パイプラインの整備"
+        ]
+      }
+    ],
+    "stack": ["TypeScript", "Next.js", "React", "PostgreSQL", "AWS"]
+  },
+  {
+    "company": "個人開発",
+    "project": "rinotsuka.github.io",
+    "start": "2026-04",
+    "end": null,
+    "summary": "OpenSpec 駆動でプロフィールサイト兼ブログを開発。",
+    "roles": [
+      {
+        "title": "オーナー / エンジニア",
+        "start": "2026-04",
+        "end": null,
+        "summary": "Next.js + Tailwind + MDX で静的サイトを構築。",
+        "highlights": ["AGENTS.md 主導の運用ルール整備", "OpenSpec 仕様駆動開発"]
+      }
+    ],
+    "stack": ["Next.js", "TypeScript", "Tailwind CSS", "MDX"]
+  }
+]
