@@ -83,10 +83,10 @@
 
 ## 10. ドキュメントと運用整備
 
-- [ ] 10.1 `README.md` にローカル開発・ビルド・デプロイ手順、トークン規約、ブログ追加手順、経歴更新手順を記載
-- [ ] 10.2 `docs/career-update.md` に `content/raw/career.md` から `content/career.json` を再生成する Claude Code Chat 用プロンプトを記載
-- [ ] 10.3 デザイントークン規約（hex 直書き禁止・斜め禁止）を `AGENTS.md` または `rules/style.md` に追記
-- [ ] 10.4 `proposal.md` の運用ルール（永続メモリ不使用 / リポジトリ内一元管理）と整合していることを最終確認
+- [x] 10.1 `README.md` にローカル開発・ビルド・デプロイ手順、トークン規約、ブログ追加手順、経歴更新手順を記載
+- [x] 10.2 `docs/career-update.md` に `content/raw/career.md` から `content/career.json` を再生成する Claude Code Chat 用プロンプトを記載
+- [x] 10.3 デザイントークン規約（hex 直書き禁止・斜め禁止）を `rules/style.md` に整理（`AGENTS.md` から参照）
+- [x] 10.4 `proposal.md` の運用ルール（永続メモリ不使用 / リポジトリ内一元管理）と整合していることを最終確認（README / rules / docs すべて AGENTS.md を参照する記述）
 
 ## 11. 仕上げと検証
 
