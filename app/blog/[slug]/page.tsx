@@ -67,26 +67,29 @@ export default async function BlogPostPage({
   } as never);
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
-      <p className="text-xs text-base-muted">
-        <Link href={`${basePath}/blog`} className="hover:text-accent-deep">
-          ← Blog 一覧へ
+    <main className="mx-auto max-w-3xl px-6 py-20">
+      <p className="font-script text-sm text-peach-deep">
+        <Link
+          href={`${basePath}/blog`}
+          className="inline-flex items-center gap-1 hover:underline"
+        >
+          <span aria-hidden="true">←</span> Blog 一覧へ
         </Link>
       </p>
-      <article className="mt-6">
+      <article className="mt-8">
         <header>
-          <h1 className="font-display text-3xl leading-tight text-base-ink">
-            {post.title}
-          </h1>
-          <p className="mt-2 text-sm text-base-muted">
+          <p className="font-script text-base text-sun-deep">
             <time dateTime={post.date}>{post.date}</time>
           </p>
+          <h1 className="mt-2 font-display text-3xl leading-tight text-ink sm:text-4xl">
+            {post.title}
+          </h1>
           {post.tags && post.tags.length > 0 ? (
-            <ul className="mt-3 flex flex-wrap gap-2">
+            <ul className="mt-4 flex flex-wrap gap-2">
               {post.tags.map((t) => (
                 <li
                   key={t}
-                  className="rounded-pill bg-accent-soft px-2.5 py-0.5 text-xs text-accent-deep"
+                  className="rounded-pill bg-peach-soft px-2.5 py-0.5 text-xs text-peach-deep shadow-crayon"
                 >
                   #{t}
                 </li>

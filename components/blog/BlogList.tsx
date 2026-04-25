@@ -31,10 +31,10 @@ export function BlogList({
             <li>
               <Link
                 href={`${basePath}/blog`}
-                className={`rounded-pill border-hair px-3 py-1 transition-colors ${
+                className={`rounded-pill border-soft px-3 py-1 transition-colors ${
                   !activeTag
-                    ? "border-accent bg-accent-soft text-accent-deep"
-                    : "border-line bg-white/70 text-base-ink hover:border-accent"
+                    ? "border-peach-deep bg-peach-soft text-peach-deep"
+                    : "border-paper-edge bg-paper text-ink hover:border-peach-deep"
                 }`}
               >
                 すべて
@@ -44,10 +44,10 @@ export function BlogList({
               <li key={t}>
                 <Link
                   href={`${basePath}/blog?tag=${encodeURIComponent(t)}`}
-                  className={`rounded-pill border-hair px-3 py-1 transition-colors ${
+                  className={`rounded-pill border-soft px-3 py-1 transition-colors ${
                     activeTag === t
-                      ? "border-accent bg-accent-soft text-accent-deep"
-                      : "border-line bg-white/70 text-base-ink hover:border-accent"
+                      ? "border-peach-deep bg-peach-soft text-peach-deep"
+                      : "border-paper-edge bg-paper text-ink hover:border-peach-deep"
                   }`}
                 >
                   #{t}
@@ -59,14 +59,14 @@ export function BlogList({
       ) : null}
 
       {visible.length === 0 ? (
-        <p className="mt-10 text-sm text-base-muted">
+        <p className="mt-10 text-sm text-ink-mocha">
           該当する記事がありません。
         </p>
       ) : (
-        <ul className="mt-8 grid gap-5">
-          {visible.map((post) => (
+        <ul className="mt-8 grid gap-7 sm:grid-cols-2">
+          {visible.map((post, idx) => (
             <li key={post.slug}>
-              <PostCard post={post} />
+              <PostCard post={post} index={idx} />
             </li>
           ))}
         </ul>
