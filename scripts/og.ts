@@ -26,32 +26,33 @@ function template({ title, subtitle }: { title: string; subtitle: string }) {
         justifyContent: "center",
         alignItems: "flex-start",
         padding: "80px",
-        backgroundImage: "linear-gradient(135deg, #FBF7F2 0%, #FBE3E8 100%)",
+        backgroundImage:
+          "linear-gradient(135deg, #FAF3E5 0%, #F4D0BC 65%, #F4E5BB 100%)",
         fontFamily: "Noto Sans JP",
-        color: "#3F3A45",
+        color: "#2A2418",
       },
       children: [
         {
           type: "div",
           props: {
             style: {
-              fontSize: 28,
-              letterSpacing: 6,
-              color: "#D98AA0",
+              fontSize: 26,
+              letterSpacing: 8,
+              color: "#7E2D14",
               textTransform: "uppercase",
             },
-            children: subtitle,
+            children: `✶  ${subtitle}`,
           },
         },
         {
           type: "div",
           props: {
             style: {
-              marginTop: 24,
+              marginTop: 28,
               fontSize: 64,
               fontWeight: 700,
-              lineHeight: 1.25,
-              color: "#3F3A45",
+              lineHeight: 1.2,
+              color: "#2A2418",
               maxWidth: "1040px",
             },
             children: title,
@@ -61,11 +62,32 @@ function template({ title, subtitle }: { title: string; subtitle: string }) {
           type: "div",
           props: {
             style: {
-              marginTop: 48,
+              marginTop: 56,
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
               fontSize: 24,
-              color: "#7A7388",
+              color: "#5A4530",
             },
-            children: "rinotsuka.github.io",
+            children: [
+              {
+                type: "div",
+                props: {
+                  style: {
+                    width: 16,
+                    height: 16,
+                    borderRadius:
+                      "62% 38% 53% 47% / 41% 59% 41% 59%",
+                    background: "#E68B6F",
+                  },
+                  children: "",
+                },
+              },
+              {
+                type: "span",
+                props: { children: "rinotsuka.github.io" },
+              },
+            ],
           },
         },
       ],
