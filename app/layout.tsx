@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Plus_Jakarta_Sans } from "next/font/google";
+import { Caveat, Klee_One, Noto_Sans_JP } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SvgDefs } from "@/components/decor/SvgDefs";
 import "./globals.css";
 
 const notoJp = Noto_Sans_JP({
@@ -11,10 +12,17 @@ const notoJp = Noto_Sans_JP({
   display: "swap",
 });
 
-const display = Plus_Jakarta_Sans({
+const klee = Klee_One({
   subsets: ["latin"],
-  weight: ["500", "700"],
-  variable: "--font-display",
+  weight: ["400", "600"],
+  variable: "--font-klee",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-caveat",
   display: "swap",
 });
 
@@ -55,8 +63,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" className={`${notoJp.variable} ${display.variable}`}>
-      <body className="min-h-screen bg-base text-base-ink">
+    <html
+      lang="ja"
+      className={`${notoJp.variable} ${klee.variable} ${caveat.variable}`}
+    >
+      <body className="min-h-screen bg-paper text-ink">
+        <SvgDefs />
         <Header />
         {children}
         <Footer />

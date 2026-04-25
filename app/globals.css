@@ -5,38 +5,120 @@
 @layer base {
   :root {
     color-scheme: light;
+    /* SVG turbulence のグレースケールノイズ。multiply blend で紙の繊維感を出す。 */
+    --paper-grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.32 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    /* 大きめのチョークノイズ（カードや帯に重ねる） */
+    --crayon-grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 360'><filter id='c'><feTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23c)'/></svg>");
   }
 
   html,
   body {
-    background-color: theme("colors.base.DEFAULT");
-    color: theme("colors.base.ink");
+    background-color: theme("colors.paper.DEFAULT");
+    color: theme("colors.ink.DEFAULT");
   }
 
   body {
     font-family: theme("fontFamily.sans");
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    background-image: var(--paper-grain);
+    background-attachment: fixed;
+    background-size: 240px 240px;
   }
 
   ::selection {
-    background-color: theme("colors.accent.soft");
-    color: theme("colors.base.ink");
+    background-color: theme("colors.peach.soft");
+    color: theme("colors.ink.DEFAULT");
+  }
+
+  /* 見出しはデフォルトで Klee（display）。日本語は Noto JP にフォールバック。 */
+  h1, h2, h3 {
+    font-family: theme("fontFamily.display");
+    letter-spacing: 0.01em;
   }
 }
 
 @layer components {
+  /* 紙のサーフェイスに使うベース（カード裏地）。multiply で chalk 感を重ねる。 */
+  .paper-surface {
+    position: relative;
+    background-color: rgb(255 250 235 / 0.96);
+    background-image: var(--crayon-grain);
+    background-size: 320px 320px;
+    background-blend-mode: multiply;
+  }
+  .paper-surface-deep {
+    position: relative;
+    background-color: theme("colors.paper.deep");
+    background-image: var(--crayon-grain);
+    background-size: 320px 320px;
+    background-blend-mode: multiply;
+  }
+
+  /* テープで貼ったような微細な薄影 */
+  .tape-shadow::after {
+    content: "";
+    position: absolute;
+    inset: 6px 6px -6px -6px;
+    z-index: -1;
+    background-color: theme("colors.paper.edge");
+    border-radius: inherit;
+    opacity: 0.45;
+    filter: blur(4px);
+  }
+
+  /* クレヨン下線（手描きの波線下線をテキストに） */
+  .crayon-underline {
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 38%,
+      theme("colors.peach.soft") 38%,
+      theme("colors.peach.soft") 100%
+    );
+    background-size: 100% 36%;
+    background-position: 0 88%;
+    background-repeat: no-repeat;
+    padding-bottom: 0.05em;
+  }
+
+  /* セクション用ナンバー印（CHAPTER 番号付け） */
+  .chapter-stamp {
+    @apply inline-flex items-center gap-2 font-script text-base text-peach-deep;
+  }
+  .chapter-stamp::before {
+    content: "✶";
+    color: theme("colors.sun.deep");
+  }
+
+  /* ロゴ・装飾用パレット（SVG 内で var(--...) として参照） */
+  .crayon-palette {
+    --c-paper: theme("colors.paper.DEFAULT");
+    --c-paper-deep: theme("colors.paper.deep");
+    --c-ink: theme("colors.ink.DEFAULT");
+    --c-mocha: theme("colors.ink.mocha");
+    --c-peach: theme("colors.peach.DEFAULT");
+    --c-peach-deep: theme("colors.peach.deep");
+    --c-peach-soft: theme("colors.peach.soft");
+    --c-sage: theme("colors.sage.DEFAULT");
+    --c-sage-deep: theme("colors.sage.deep");
+    --c-sun: theme("colors.sun.DEFAULT");
+    --c-sun-soft: theme("colors.sun.soft");
+    --c-sun-deep: theme("colors.sun.deep");
+  }
+
+  /* MDX prose は既存維持（クレヨンテイストにも調和する範囲で色を寄せる） */
   .prose-rino {
-    @apply text-base text-base-ink/90;
+    @apply text-base text-ink;
   }
   .prose-rino h1 {
-    @apply mt-10 mb-4 font-display text-2xl text-base-ink;
+    @apply mt-10 mb-4 font-display text-2xl text-ink;
   }
   .prose-rino h2 {
-    @apply mt-10 mb-3 font-display text-xl text-base-ink;
+    @apply mt-10 mb-3 font-display text-xl text-ink;
   }
   .prose-rino h3 {
-    @apply mt-6 mb-2 font-display text-lg text-base-ink;
+    @apply mt-6 mb-2 font-display text-lg text-ink;
   }
   .prose-rino p {
     @apply my-4 leading-7;
@@ -46,16 +128,16 @@
     @apply my-4 space-y-1 pl-6;
   }
   .prose-rino ul {
-    @apply list-disc marker:text-accent;
+    @apply list-disc marker:text-peach-deep;
   }
   .prose-rino ol {
-    @apply list-decimal marker:text-accent;
+    @apply list-decimal marker:text-peach-deep;
   }
   .prose-rino a {
-    @apply text-accent-deep underline decoration-accent decoration-2 underline-offset-4 hover:decoration-accent-deep;
+    @apply text-peach-deep underline decoration-peach decoration-2 underline-offset-4 hover:decoration-peach-deep;
   }
   .prose-rino code {
-    @apply rounded-soft bg-cream px-1.5 py-0.5 text-sm text-base-ink;
+    @apply rounded-soft bg-sun-soft px-1.5 py-0.5 text-sm text-ink;
   }
   .prose-rino pre {
     @apply my-6 overflow-x-auto rounded-plump p-5 text-sm shadow-card;
@@ -64,6 +146,6 @@
     @apply bg-transparent p-0;
   }
   .prose-rino blockquote {
-    @apply my-6 border-l-soft border-accent bg-accent-soft/50 px-4 py-2 text-base-ink/90;
+    @apply my-6 border-l-crayon border-peach bg-peach-soft/50 px-4 py-2 text-ink;
   }
 }
