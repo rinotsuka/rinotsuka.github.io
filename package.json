@@ -1,0 +1,41 @@
+{
+  "name": "rinotsuka.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "description": "rinotsuka personal profile site",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && tsx scripts/og.ts && tsx scripts/feed.ts",
+    "build:next": "next build",
+    "start": "npx serve out",
+    "lint": "next lint",
+    "lint:tokens": "node scripts/lint-tokens.mjs",
+    "test:a11y": "playwright test"
+  },
+  "dependencies": {
+    "@next/mdx": "^15.0.0",
+    "feed": "^4.2.2",
+    "gray-matter": "^4.0.3",
+    "next": "^15.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rehype-pretty-code": "^0.14.0",
+    "satori": "^0.12.0",
+    "satori-html": "^0.3.2",
+    "sharp": "^0.33.5",
+    "shiki": "^1.22.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.0",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}

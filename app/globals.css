@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    background-color: theme("colors.base.DEFAULT");
+    color: theme("colors.base.ink");
+  }
+
+  body {
+    font-family: theme("fontFamily.sans");
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: theme("colors.accent.soft");
+    color: theme("colors.base.ink");
+  }
+}

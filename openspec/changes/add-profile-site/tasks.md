@@ -1,30 +1,30 @@
 ## 1. プロジェクト基盤セットアップ
 
-- [ ] 1.1 `package.json` を作成し `next` / `react` / `react-dom` / `typescript` / `@types/*` を追加
-- [ ] 1.2 `tsconfig.json` を作成（`strict: true`、`baseUrl: "."`、`paths` に `@/*` 設定）
-- [ ] 1.3 `next.config.mjs` に `output: 'export'` と `images.unoptimized: true` を設定
-- [ ] 1.4 `next.config.mjs` で環境変数 `NEXT_BASE_PATH` を読み、設定時のみ `basePath` と `assetPrefix` を同値化
-- [ ] 1.5 `tailwindcss` / `postcss` / `autoprefixer` を導入し、`tailwind.config.ts` と `postcss.config.mjs` を作成
-- [ ] 1.6 `.gitignore` に `node_modules/`、`.next/`、`out/`、`.env*`（`!.env.example` 除く）を追加
-- [ ] 1.7 `npm run dev` / `npm run build` / `npm run start`（export 後の動作確認用）を `package.json` の scripts に整備
-- [ ] 1.8 `npm run dev` でサーバが起動し、空の `app/page.tsx` が描画されることを確認
+- [x] 1.1 `package.json` を作成し `next` / `react` / `react-dom` / `typescript` / `@types/*` を追加
+- [x] 1.2 `tsconfig.json` を作成（`strict: true`、`baseUrl: "."`、`paths` に `@/*` 設定）
+- [x] 1.3 `next.config.mjs` に `output: 'export'` と `images.unoptimized: true` を設定
+- [x] 1.4 `next.config.mjs` で環境変数 `NEXT_BASE_PATH` を読み、設定時のみ `basePath` と `assetPrefix` を同値化
+- [x] 1.5 `tailwindcss` / `postcss` / `autoprefixer` を導入し、`tailwind.config.ts` と `postcss.config.mjs` を作成
+- [x] 1.6 `.gitignore` に `node_modules/`、`.next/`、`out/`、`.env*`（`!.env.example` 除く）を追加
+- [x] 1.7 `npm run dev` / `npm run build` / `npm run start`（export 後の動作確認用）を `package.json` の scripts に整備
+- [x] 1.8 `npm run dev` でサーバが起動し、空の `app/page.tsx` が描画されることを確認
 
 ## 2. デザイントークンと共通レイアウト
 
-- [ ] 2.1 `tailwind.config.ts` の `theme.extend` に `colors`（ベース / アクセント / テキスト / 背景）、`fontFamily`、`borderRadius`、`boxShadow`、`borderWidth` のトークンを定義
-- [ ] 2.2 Noto Sans JP（および採用する英文フォント）を `next/font` で読み込み、`app/layout.tsx` に適用
-- [ ] 2.3 `app/layout.tsx` に `<html lang="ja">`、`metadata`（`title` / `description` / `openGraph` 既定値）、Header、Footer のスケルトンを実装
-- [ ] 2.4 `components/layout/Header.tsx` を実装（ロゴ + ナビ: ホーム / ブログ）
-- [ ] 2.5 `components/layout/Footer.tsx` を実装（著作表記 + 外部リンク: GitHub / 連絡先）
-- [ ] 2.6 `app/globals.css` でリセット CSS 相当の設定とトークン参照基底スタイルを適用
-- [ ] 2.7 トークン未定義の生 hex / px / `skew-` が混入していないかを確認する CI チェック（grep ベース）を追加
+- [x] 2.1 `tailwind.config.ts` の `theme.extend` に `colors`（ベース / アクセント / テキスト / 背景）、`fontFamily`、`borderRadius`、`boxShadow`、`borderWidth` のトークンを定義
+- [x] 2.2 Noto Sans JP（および採用する英文フォント）を `next/font` で読み込み、`app/layout.tsx` に適用
+- [x] 2.3 `app/layout.tsx` に `<html lang="ja">`、`metadata`（`title` / `description` / `openGraph` 既定値）、Header、Footer のスケルトンを実装
+- [x] 2.4 `components/layout/Header.tsx` を実装（ロゴ + ナビ: ホーム / ブログ）
+- [x] 2.5 `components/layout/Footer.tsx` を実装（著作表記 + 外部リンク: GitHub / 連絡先）
+- [x] 2.6 `app/globals.css` でリセット CSS 相当の設定とトークン参照基底スタイルを適用
+- [x] 2.7 トークン未定義の生 hex / px / `skew-` が混入していないかを確認する CI チェック（grep ベース）を追加
 
 ## 3. ロゴと SVG 安全化
 
-- [ ] 3.1 オカメインコ + ふんわりフレーム + ワードマーク `RINOTSUKA` + サブコピー `development engineer` の SVG を AI プロンプトで生成
-- [ ] 3.2 生成 SVG を `svgo` で最適化し、`<script>` / `on*` 属性 / 外部参照を除去
-- [ ] 3.3 最適化済み SVG を `public/logo.svg` に配置し、Header から参照
-- [ ] 3.4 `public/favicon.svg`（ロゴから派生）を生成・配置し、`metadata.icons` に登録
+- [x] 3.1 オカメインコ + ふんわりフレーム + ワードマーク `RINOTSUKA` + サブコピー `development engineer` の SVG を AI プロンプトで生成
+- [x] 3.2 生成 SVG を `svgo` で最適化し、`<script>` / `on*` 属性 / 外部参照を除去
+- [x] 3.3 最適化済み SVG を `public/logo.svg` に配置し、Header から参照
+- [x] 3.4 `public/favicon.svg`（ロゴから派生）を生成・配置し、`metadata.icons` に登録
 
 ## 4. 経歴データとタイムライン
 
