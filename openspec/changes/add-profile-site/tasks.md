@@ -39,11 +39,11 @@
 
 ## 5. Profile セクション
 
-- [ ] 5.1 `content/profile.ts`（または `.json`）に About 文と Skills カテゴリ（カテゴリ名 + 項目配列の構造）を定義
-- [ ] 5.2 `components/profile/Profile.tsx` を実装し About + Skills を 1 セクションに集約
-- [ ] 5.3 連絡導線（mailto / GitHub / SNS のいずれか）の外部リンクを About 内または直下に配置
-- [ ] 5.4 Skills カテゴリは複数（最低 2 カテゴリ）になるサンプルデータで初期化
-- [ ] 5.5 `app/page.tsx` に Profile セクションを組み込む
+- [x] 5.1 `content/profile.ts`（または `.json`）に About 文と Skills カテゴリ（カテゴリ名 + 項目配列の構造）を定義
+- [x] 5.2 `components/profile/Profile.tsx` を実装し About + Skills を 1 セクションに集約
+- [x] 5.3 連絡導線（mailto / GitHub / SNS のいずれか）の外部リンクを About 内または直下に配置
+- [x] 5.4 Skills カテゴリは複数（最低 2 カテゴリ）になるサンプルデータで初期化
+- [x] 5.5 `app/page.tsx` に Profile セクションを組み込む
 
 ## 6. ブログ機能
 

@@ -1,4 +1,5 @@
 import { CareerTimeline } from "@/components/career/Timeline";
+import { ProfileSection } from "@/components/profile/Profile";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
         </p>
       </section>
       <CareerTimeline />
+      <ProfileSection />
     </>
   );
 }
