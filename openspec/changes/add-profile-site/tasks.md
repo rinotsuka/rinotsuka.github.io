@@ -90,8 +90,8 @@
 
 ## 11. 仕上げと検証
 
-- [ ] 11.1 `npm run build` が警告なく完走し、`out/` 配下に `index.html`、`blog/index.html`、各 `blog/<slug>/index.html`、`feed.xml`、`og/*.png` が揃うことを確認
-- [ ] 11.2 GitHub Pages 上で `/`、`/blog`、`/blog/<slug>`、`/feed.xml` を実機で確認
-- [ ] 11.3 OGP プレビュー（X / Discord 等）でトップとブログ記事の OGP が正しく表示されることを確認
-- [ ] 11.4 a11y テストが CI でグリーンであることを確認
-- [ ] 11.5 OpenSpec 変更の archive 手順（`opsx:archive` / `openspec-archive-change`）に進める状態であることを確認
+- [x] 11.1 `npm run build` が警告なく完走し、`out/` 配下に `index.html`、`blog/index.html`、各 `blog/<slug>/index.html`、`feed.xml`、`og/*.png` が揃うことを確認（クリーンビルドで全成果物確認済み）
+- [ ] 11.2 GitHub Pages 上で `/`、`/blog`、`/blog/<slug>`、`/feed.xml` を実機で確認（**ユーザー作業**: main push 後に確認）
+- [ ] 11.3 OGP プレビュー（X / Discord 等）でトップとブログ記事の OGP が正しく表示されることを確認（**ユーザー作業**: デプロイ後に確認）
+- [ ] 11.4 a11y テストが CI でグリーンであることを確認（**ユーザー作業**: GitHub Actions ログを確認。ローカルでは `npm run test:a11y` 3/3 グリーン）
+- [x] 11.5 OpenSpec 変更の archive 手順（`opsx:archive` / `openspec-archive-change`）に進める状態であることを確認（残るユーザー作業 4 件以外は実装完了）
