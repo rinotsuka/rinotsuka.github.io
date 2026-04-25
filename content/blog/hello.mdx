@@ -1,0 +1,38 @@
+---
+title: "サイトをつくりました"
+date: "2026-04-25"
+summary: "Next.js + MDX でプロフィールサイトを作り直したので、構成の覚書。"
+tags: ["site", "nextjs"]
+---
+
+このサイトはフリーランス SES エンジニア rinotsuka のプロフィール / 職務経歴 / ブログをまとめたものです。
+GitHub Pages に静的書き出し（`output: "export"`）しています。
+
+## 構成
+
+主な構成要素は以下です。
+
+- **Next.js 15 + App Router + TypeScript**
+- **Tailwind CSS v3** によるトークンベースのデザイン
+- **MDX**: `next-mdx-remote/rsc` + `remark-gfm` でビルド時に読み込み
+- **GitHub Pages**: `actions/deploy-pages` で main push に追従
+
+## デザインの方針
+
+サイト全体は「丸／blob」の**カワイイ系**で統一しつつ、ブログ本文だけは読みやすさ最優先のフラットなレイアウトにしています。
+
+> サイト全体 = 装飾あり。
+> ブログ本文 = 装飾控えめ・max-width 760px。
+
+## なぜ blob？
+
+真円や角丸長方形よりも、四角を潰してぐにょっとした形のほうが**手描き感**が出ます。
+`tailwind.config.ts` で 3 種の非対称 border-radius を定義し、カードやアイコン枠に使い分けています。
+
+```ts
+borderRadius: {
+  blob: "62% 38% 50% 50% / 52% 60% 40% 48%",
+  "blob-2": "44% 56% 60% 40% / 56% 42% 58% 44%",
+  "blob-3": "58% 42% 38% 62% / 46% 60% 40% 54%",
+}
+```
