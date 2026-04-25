@@ -6,6 +6,9 @@ import { Footer } from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "rinotsuka",
   description: "フリーランス SES エンジニアのプロフィール / 職務経歴 / ブログ",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
