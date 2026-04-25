@@ -59,12 +59,12 @@
 
 ## 7. RSS と OGP 生成
 
-- [ ] 7.1 `feed` パッケージを導入し、`scripts/feed.ts` でビルド時に `out/feed.xml` を出力するスクリプトを作成
-- [ ] 7.2 `package.json` の `build` スクリプトを `next build && tsx scripts/og.ts && tsx scripts/feed.ts` のように合成
-- [ ] 7.3 satori / `@vercel/og` 等を使った OGP 生成スクリプト `scripts/og.ts` を実装（トップ + 各ブログ slug）
-- [ ] 7.4 Noto Sans JP の `.otf` を OGP 用に同梱（SIL OFL ライセンス確認の上 `assets/fonts/` にコミット）
-- [ ] 7.5 `app/layout.tsx` および `app/blog/[slug]/page.tsx` の `metadata.openGraph.images` を生成画像 URL に紐付け
-- [ ] 7.6 `out/og/*.png` と `out/feed.xml` がビルド成果物に存在することを確認
+- [x] 7.1 `feed` パッケージを導入し、`scripts/feed.ts` でビルド時に `out/feed.xml` を出力するスクリプトを作成
+- [x] 7.2 `package.json` の `build` スクリプトを `next build && tsx scripts/og.ts && tsx scripts/feed.ts` のように合成
+- [x] 7.3 satori + @resvg/resvg-js による OGP 生成スクリプト `scripts/og.ts` を実装（トップ + 各ブログ slug）
+- [x] 7.4 Noto Sans JP OTF（Regular/Bold、notofonts/noto-cjk SubsetOTF/JP）を `assets/fonts/` に同梱、`NOTICE.md` で SIL OFL 1.1 を明記。`scripts/setup-fonts.mjs` で再取得可能
+- [x] 7.5 `app/layout.tsx` および `app/blog/[slug]/page.tsx` の `metadata.openGraph.images` を生成画像 URL に紐付け
+- [x] 7.6 `out/og/*.png` と `out/feed.xml` がビルド成果物に存在することを確認（`npm run build` 完走で確認済み）
 
 ## 8. アクセシビリティチェック
 
