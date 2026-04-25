@@ -14,11 +14,11 @@ const config: Config = {
         base: {
           DEFAULT: "#FBF7F2", // 背景
           ink: "#3F3A45", // 本文テキスト
-          muted: "#7A7388", // 弱いテキスト
+          muted: "#5C5570", // 弱いテキスト（WCAG AA 4.5:1 を満たす濃さ）
         },
         accent: {
           DEFAULT: "#F4B6C2", // ピーチピンク
-          deep: "#D98AA0",
+          deep: "#8E3A52", // リンク用（accent-soft 上でも WCAG AA 4.5:1 を満たす濃さ）
           soft: "#FBE3E8",
         },
         cream: "#FFF6E5",

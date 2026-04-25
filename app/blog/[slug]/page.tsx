@@ -45,7 +45,7 @@ const rehypePlugins = [
   [
     rehypePrettyCode,
     {
-      theme: "github-light",
+      theme: "github-dark-default",
       keepBackground: true,
     },
   ],

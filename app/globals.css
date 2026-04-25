@@ -55,10 +55,10 @@
     @apply text-accent-deep underline decoration-accent decoration-2 underline-offset-4 hover:decoration-accent-deep;
   }
   .prose-rino code {
-    @apply rounded-soft bg-cream px-1.5 py-0.5 text-sm;
+    @apply rounded-soft bg-cream px-1.5 py-0.5 text-sm text-base-ink;
   }
   .prose-rino pre {
-    @apply my-6 overflow-x-auto rounded-plump border-hair border-line bg-cream p-5 text-sm shadow-card;
+    @apply my-6 overflow-x-auto rounded-plump p-5 text-sm shadow-card;
   }
   .prose-rino pre code {
     @apply bg-transparent p-0;

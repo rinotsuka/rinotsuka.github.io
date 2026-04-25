@@ -68,10 +68,10 @@
 
 ## 8. アクセシビリティチェック
 
-- [ ] 8.1 `@axe-core/playwright` と `playwright` を `devDependencies` に追加
-- [ ] 8.2 `tests/a11y.spec.ts` で `/`、`/blog`、`/blog/<代表 slug>` を巡回する axe テストを実装
-- [ ] 8.3 `critical` / `serious` 違反を検出した場合に CI を失敗させる設定にする
-- [ ] 8.4 ローカルで `npm run test:a11y` がグリーンになることを確認
+- [x] 8.1 `@axe-core/playwright` と `playwright` を `devDependencies` に追加
+- [x] 8.2 `tests/a11y.spec.ts` で `/`、`/blog`、`/blog/<代表 slug>` を巡回する axe テストを実装
+- [x] 8.3 `critical` / `serious` 違反を検出した場合に CI を失敗させる設定にする
+- [x] 8.4 ローカルで `npm run test:a11y` がグリーンになることを確認
 
 ## 9. デプロイワークフロー
 
