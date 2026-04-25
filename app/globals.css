@@ -24,3 +24,46 @@
     color: theme("colors.base.ink");
   }
 }
+
+@layer components {
+  .prose-rino {
+    @apply text-base text-base-ink/90;
+  }
+  .prose-rino h1 {
+    @apply mt-10 mb-4 font-display text-2xl text-base-ink;
+  }
+  .prose-rino h2 {
+    @apply mt-10 mb-3 font-display text-xl text-base-ink;
+  }
+  .prose-rino h3 {
+    @apply mt-6 mb-2 font-display text-lg text-base-ink;
+  }
+  .prose-rino p {
+    @apply my-4 leading-7;
+  }
+  .prose-rino ul,
+  .prose-rino ol {
+    @apply my-4 space-y-1 pl-6;
+  }
+  .prose-rino ul {
+    @apply list-disc marker:text-accent;
+  }
+  .prose-rino ol {
+    @apply list-decimal marker:text-accent;
+  }
+  .prose-rino a {
+    @apply text-accent-deep underline decoration-accent decoration-2 underline-offset-4 hover:decoration-accent-deep;
+  }
+  .prose-rino code {
+    @apply rounded-soft bg-cream px-1.5 py-0.5 text-sm;
+  }
+  .prose-rino pre {
+    @apply my-6 overflow-x-auto rounded-plump border-hair border-line bg-cream p-5 text-sm shadow-card;
+  }
+  .prose-rino pre code {
+    @apply bg-transparent p-0;
+  }
+  .prose-rino blockquote {
+    @apply my-6 border-l-soft border-accent bg-accent-soft/50 px-4 py-2 text-base-ink/90;
+  }
+}

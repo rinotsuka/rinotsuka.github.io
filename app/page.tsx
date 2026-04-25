@@ -1,5 +1,6 @@
 import { CareerTimeline } from "@/components/career/Timeline";
 import { ProfileSection } from "@/components/profile/Profile";
+import { LatestPosts } from "@/components/blog/LatestPosts";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       </section>
       <CareerTimeline />
       <ProfileSection />
+      <LatestPosts limit={3} />
     </>
   );
 }

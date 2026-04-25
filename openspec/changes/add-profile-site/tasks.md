@@ -47,15 +47,15 @@
 
 ## 6. ブログ機能
 
-- [ ] 6.1 `@next/mdx` / `gray-matter` / `rehype-pretty-code` / `shiki` を導入
-- [ ] 6.2 `lib/blog/schema.ts` で frontmatter（`title` / `date` / `tags?` / `summary`）の Zod 検証を実装
-- [ ] 6.3 `lib/blog/load.ts` で `content/blog/*.mdx` を全件読み込み + 検証 + ソート
-- [ ] 6.4 `app/blog/page.tsx`（一覧）を実装。`date` 降順、各カードに `title` / `date` / `summary` / `tags` を表示
-- [ ] 6.5 `app/blog/[slug]/page.tsx`（詳細）を実装し `generateStaticParams` で全 slug を静的化
-- [ ] 6.6 `?tag=` クエリでクライアントサイド絞り込みを行うフィルタコンポーネントを実装
-- [ ] 6.7 `rehype-pretty-code` をビルド時パイプラインに組み込み、クライアント JS でハイライトしないことを確認
-- [ ] 6.8 サンプル MDX 記事 1〜2 本を `content/blog/` に追加し、ビルドと表示を確認
-- [ ] 6.9 `app/page.tsx` の最新ブログセクションで `date` 降順先頭 3 件を表示。0 件時の代替表示を実装
+- [x] 6.1 `@mdx-js/mdx` / `gray-matter` / `rehype-pretty-code` / `shiki` を導入（@next/mdx は静的エクスポート + 動的 content 配置との相性問題で不採用、@mdx-js/mdx の `evaluate` を採用）
+- [x] 6.2 `lib/blog/schema.ts` で frontmatter（`title` / `date` / `tags?` / `summary`）の Zod 検証を実装
+- [x] 6.3 `lib/blog/load.ts` で `content/blog/*.mdx` を全件読み込み + 検証 + ソート
+- [x] 6.4 `app/blog/page.tsx`（一覧）を実装。`date` 降順、各カードに `title` / `date` / `summary` / `tags` を表示
+- [x] 6.5 `app/blog/[slug]/page.tsx`（詳細）を実装し `generateStaticParams` で全 slug を静的化
+- [x] 6.6 `?tag=` クエリでクライアントサイド絞り込みを行うフィルタコンポーネントを実装
+- [x] 6.7 `rehype-pretty-code` をビルド時パイプラインに組み込み、クライアント JS でハイライトしないことを確認
+- [x] 6.8 サンプル MDX 記事 1〜2 本を `content/blog/` に追加し、ビルドと表示を確認
+- [x] 6.9 `app/page.tsx` の最新ブログセクションで `date` 降順先頭 3 件を表示。0 件時の代替表示を実装
 
 ## 7. RSS と OGP 生成
 
