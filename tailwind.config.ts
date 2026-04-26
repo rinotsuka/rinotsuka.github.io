@@ -26,6 +26,7 @@ const config: Config = {
           DEFAULT: "#ffcd3c",
           soft: "#fff5cf",
         },
+        cockatiel: "#faf9f5",
       },
       fontFamily: {
         sans: [
@@ -73,12 +74,17 @@ const config: Config = {
           "0%, 92%, 100%": { transform: "scaleY(1)" },
           "95%": { transform: "scaleY(0.1)" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         float: "float 6s ease-in-out infinite",
         sway: "sway 4s ease-in-out infinite",
         bob: "bob 3.5s ease-in-out infinite",
         blink: "blink 5s ease-in-out infinite",
+        marquee: "marquee 140s linear infinite",
       },
     },
   },
