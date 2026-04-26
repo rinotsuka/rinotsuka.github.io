@@ -120,7 +120,7 @@ export function Header() {
   const { path, svgWidth, svgHeight } = buildLogoPlateGeometry();
 
   return (
-    <header>
+    <header className="relative z-20">
       <div className="relative" style={{ height: `${HEADER_HEIGHT}px` }}>
         <div className="absolute inset-0 bg-white" />
         <svg

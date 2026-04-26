@@ -38,6 +38,11 @@ const config: Config = {
           "Meiryo",
           "sans-serif",
         ],
+        handwritten: [
+          "var(--font-hachi-maru-pop)",
+          "Hiragino Maru Gothic ProN",
+          "sans-serif",
+        ],
       },
       borderRadius: {
         blob: "62% 38% 50% 50% / 52% 60% 40% 48%",
@@ -47,6 +52,30 @@ const config: Config = {
       boxShadow: {
         soft: "0 12px 32px -18px rgba(255, 138, 61, 0.35)",
         card: "0 8px 24px -16px rgba(0, 0, 0, 0.18)",
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0px) rotate(var(--rot, 0deg))" },
+          "50%": { transform: "translateY(-12px) rotate(var(--rot, 0deg))" },
+        },
+        sway: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        bob: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-6px)" },
+        },
+        blink: {
+          "0%, 92%, 100%": { transform: "scaleY(1)" },
+          "95%": { transform: "scaleY(0.1)" },
+        },
+      },
+      animation: {
+        float: "float 6s ease-in-out infinite",
+        sway: "sway 4s ease-in-out infinite",
+        bob: "bob 3.5s ease-in-out infinite",
+        blink: "blink 5s ease-in-out infinite",
       },
     },
   },
