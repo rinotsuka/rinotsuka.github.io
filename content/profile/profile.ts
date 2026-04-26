@@ -6,17 +6,13 @@ export type ProfileLink = {
 export type Profile = {
   name: string;
   handle: string;
-  title: string;
-  location?: string;
   bio: string[];
   links: ProfileLink[];
 };
 
 export const profile: Profile = {
-  name: "rinotsuka",
-  handle: "@tsuka-rinorino",
-  title: "Freelance SES Engineer",
-  location: "Japan",
+  name: "中山 勝則",
+  handle: "@rinotsuka",
   bio: [
     "フリーランスの SES エンジニアとして、Web アプリケーション開発を中心に活動しています。",
     "バックエンドからフロントエンドまで横断して、業務 SaaS / 金融 / スタートアップなど複数の業界に関わってきました。",

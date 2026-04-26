@@ -49,6 +49,9 @@ const config: Config = {
         "blob-2": "44% 56% 60% 40% / 56% 42% 58% 44%",
         "blob-3": "58% 42% 38% 62% / 46% 60% 40% 54%",
       },
+      maxWidth: {
+        content: "736px",
+      },
       boxShadow: {
         soft: "0 12px 32px -18px rgba(255, 138, 61, 0.35)",
         card: "0 8px 24px -16px rgba(0, 0, 0, 0.18)",

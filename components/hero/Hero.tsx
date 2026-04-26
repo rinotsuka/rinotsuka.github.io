@@ -23,7 +23,7 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.55),_transparent_55%)]"
       />
-      <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-6 text-center">
+      <div className="relative mx-auto flex max-w-content flex-col items-center justify-center px-4 text-center">
         <h1 className="font-handwritten text-[26px] font-bold leading-[1.6] tracking-[0.2em] text-[#796B62]">
           えんじにあ<br className="sm:hidden" /> <span className="text-[20px]">no</span> <br className="sm:hidden" />ぽーとふぉりお
         </h1>
