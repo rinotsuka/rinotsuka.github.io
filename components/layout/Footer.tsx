@@ -1,12 +1,18 @@
+import Image from "next/image";
+
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="mt-24 border-t border-line bg-panel/60">
-      <div className="mx-auto flex max-w-content flex-col items-start gap-2 px-4 py-8 text-sm text-ink-mute md:flex-row md:items-center md:justify-between">
-        <p>© {year} rinotsuka</p>
-        <p className="text-xs">
-          フリーランス SES エンジニアの紹介サイト
-        </p>
+    <footer className="bg-white">
+      <div className="mx-auto flex max-w-content flex-col items-center gap-3 px-4 py-8 text-sm text-ink-mute">
+        <Image
+          src="/logo.png"
+          alt="rinotsuka"
+          width={48}
+          height={48}
+          className="block"
+        />
+        <p style={{ color: "#97806C" }}>© {year} Katsunori Nakayama</p>
       </div>
     </footer>
   );
