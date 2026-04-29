@@ -23,7 +23,7 @@ function IconRow({
 }) {
   return (
     <div className={className}>
-      <ul className="flex w-max items-center gap-36 text-[#A8A8A8] animate-marquee motion-reduce:animate-none">
+      <ul className="flex w-max items-center gap-36 text-[#B0A595] animate-marquee motion-reduce:animate-none">
         {icons.map((icon, i) => (
           <li key={i} className="shrink-0">
             <svg
@@ -46,7 +46,7 @@ export function SkillsSection() {
   return (
     <section
       id="skills"
-      className="overflow-hidden bg-[#F8F8F8] py-12"
+      className="overflow-hidden bg-[#fffef2] py-12"
     >
       <div className="space-y-12">
         <IconRow icons={ROW_A} />
