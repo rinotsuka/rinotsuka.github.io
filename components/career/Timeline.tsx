@@ -167,6 +167,18 @@ function CompanyItem({
 
   return (
     <li>
+      {!isFirstCompany && (
+        <div
+          aria-hidden
+          className={`grid ${GRID_COLS} h-6 gap-x-3`}
+        >
+          <div />
+          <div className="relative">
+            <span className={`${LINE_CLASS} top-0 bottom-0`} />
+          </div>
+          <div />
+        </div>
+      )}
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
