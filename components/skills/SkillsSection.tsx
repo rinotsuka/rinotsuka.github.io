@@ -23,7 +23,7 @@ function IconRow({
 }) {
   return (
     <div className={className}>
-      <ul className="flex w-max items-center gap-36 text-[#AC9582] animate-marquee motion-reduce:animate-none">
+      <ul className="flex w-max items-center gap-36 text-[#AC9B8D] animate-marquee motion-reduce:animate-none">
         {icons.map((icon, i) => (
           <li key={i} className="shrink-0">
             <svg
