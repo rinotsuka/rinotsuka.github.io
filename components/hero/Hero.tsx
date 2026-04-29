@@ -1,6 +1,7 @@
+import type { ReactNode } from "react";
 import { Blob } from "@/components/decor/Blob";
 
-export function Hero() {
+export function Hero({ title }: { title?: ReactNode } = {}) {
   return (
     <section className="relative isolate flex items-center justify-center overflow-hidden bg-primary-soft min-h-[128px] pb-2">
       <Blob
@@ -25,7 +26,11 @@ export function Hero() {
       />
       <div className="relative mx-auto flex max-w-content flex-col items-center justify-center px-4 text-center">
         <h1 className="font-handwritten text-[26px] font-bold leading-[1.6] tracking-[0.2em] text-[#796B62]">
-          えんじにあ<br className="sm:hidden" /> <span className="text-[20px]">no</span> <br className="sm:hidden" />ぽーとふぉりお
+          {title ?? (
+            <>
+              えんじにあ<br className="sm:hidden" /> <span className="text-[20px]">no</span> <br className="sm:hidden" />ぽーとふぉりお
+            </>
+          )}
         </h1>
       </div>
     </section>
