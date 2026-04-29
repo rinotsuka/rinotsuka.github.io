@@ -6,7 +6,11 @@ export function loadCareer(): CareerEntry[] {
   return [...typed.entries].sort((a, b) => b.start.localeCompare(a.start));
 }
 
+export function formatYearMonth(ym: string): string {
+  const [y, m] = ym.split("-");
+  return `${y}.${parseInt(m, 10)}`;
+}
+
 export function formatPeriod(start: string, end: string | null): string {
-  const fmt = (ym: string) => ym.replace("-", ".");
-  return `${fmt(start)} — ${end ? fmt(end) : "現在"}`;
+  return `${formatYearMonth(start)} — ${end ? formatYearMonth(end) : "現在"}`;
 }
