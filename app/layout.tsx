@@ -13,10 +13,10 @@ const hachiMaruPop = Hachi_Maru_Pop({
 });
 
 export const metadata: Metadata = {
-  title: "rinotsuka",
+  title: "えんじにあ no ぽーとふぉりお",
   description: "フリーランス SES エンジニアのプロフィール / 職務経歴 / ブログ",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.png",
   },
 };
 
