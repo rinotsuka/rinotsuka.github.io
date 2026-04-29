@@ -14,14 +14,6 @@ export function PostCard({ post }: Props) {
     >
       <div className="flex items-center gap-2 text-xs text-ink-mute">
         <time dateTime={post.date}>{formatDate(post.date)}</time>
-        {post.tags && post.tags.length > 0 && (
-          <span aria-hidden>·</span>
-        )}
-        {post.tags?.slice(0, 3).map((tag) => (
-          <span key={tag} className="rounded-full bg-panel/60 px-2 py-0.5">
-            #{tag}
-          </span>
-        ))}
       </div>
       <h3 className="mt-3 text-lg font-bold leading-snug text-ink group-hover:text-primary-strong transition">
         {post.title}

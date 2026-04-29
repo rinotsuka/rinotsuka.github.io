@@ -45,12 +45,6 @@ export default async function BlogPostPage({
           </h1>
           <div className="mt-3 flex flex-wrap items-center gap-2 text-sm text-ink-mute">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
-            {post.tags && post.tags.length > 0 && <span aria-hidden>·</span>}
-            {post.tags?.map((tag) => (
-              <span key={tag} className="rounded-full bg-panel px-2 py-0.5 text-xs">
-                #{tag}
-              </span>
-            ))}
           </div>
         </header>
 

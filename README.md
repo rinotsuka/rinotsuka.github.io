@@ -33,7 +33,7 @@ lib/                  # ローダ・ユーティリティ
 
 - **職務経歴**: [docs/career-update.md](./docs/career-update.md) を参照（MD → JSON 変換運用）
 - **プロフィール / スキル**: [content/profile/](./content/profile/) の TS ファイルを直接編集
-- **ブログ記事**: [content/blog/](./content/blog/) に MDX を追加（frontmatter は `title` / `date` / `summary` / `tags` / `draft`）
+- **ブログ記事**: [content/blog/](./content/blog/) に MDX を追加（frontmatter は `title` / `date` / `summary` / `draft`）
 
 ## デザイン方針
 
