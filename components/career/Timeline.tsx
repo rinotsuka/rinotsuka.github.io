@@ -163,9 +163,7 @@ function CompanyItem({
   const hasProjects = projects.length > 0;
 
   const summaryBelowMode: BelowMode =
-    isLastCompany && !open ? "fade" : "solid";
-  const detailBelowMode: BelowMode =
-    isLastCompany && !hasProjects ? "fade" : "solid";
+    isLastCompany && (!open || !hasProjects) ? "fade" : "solid";
 
   return (
     <li>
@@ -195,7 +193,7 @@ function CompanyItem({
           hideAbove={isFirstCompany}
           belowMode={summaryBelowMode}
         />
-        <div className="pb-4">
+        <div className="pb-8">
           <div className="flex items-start gap-2">
             <div className="flex-1">
               <h3 className="text-lg font-bold leading-snug text-ink md:text-xl">
@@ -205,6 +203,9 @@ function CompanyItem({
                 period={formatPeriod(entry.start, entry.end)}
                 employment={entry.employment}
               />
+              <p className="mt-3 text-[15px] leading-relaxed text-ink">
+                {entry.summary}
+              </p>
             </div>
             <svg
               aria-hidden
@@ -233,18 +234,6 @@ function CompanyItem({
         }`}
       >
         <div className="min-h-0 overflow-hidden">
-          <div className={`grid ${GRID_COLS} gap-x-3`}>
-            <div aria-hidden className="text-sm text-transparent">
-              —
-            </div>
-            <Rail dotKind="line" belowMode={detailBelowMode} />
-            <div className="pb-8">
-              <p className="text-[15px] leading-relaxed text-ink">
-                {entry.summary}
-              </p>
-            </div>
-          </div>
-
           {hasProjects && (
             <ol>
               {projects.map((p, pi) => {
