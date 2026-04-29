@@ -80,17 +80,8 @@ body {
   margin-top: 1.4em;
 }
 
-.prose-blog h2 {
-  margin-top: 2.4em;
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.5;
-  padding-bottom: 0.4em;
-  border-bottom: 1px solid var(--color-line);
-}
-
 .prose-blog h3 {
-  margin-top: 2em;
+  margin-top: 3em;
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.55;
@@ -126,6 +117,11 @@ body {
 
 .prose-blog strong {
   color: var(--color-ink);
+  background-image: linear-gradient(
+    transparent 65%,
+    rgba(255, 138, 61, 0.4) 65%
+  );
+  padding: 0 0.1em;
 }
 
 .prose-blog ul,
@@ -151,15 +147,33 @@ body {
 }
 
 .prose-blog blockquote {
-  border-left: 3px solid var(--color-line);
+  position: relative;
+  border-left: 3px solid #c4c1b6;
   background-color: var(--color-panel);
-  padding: 0.85em 1.1em;
+  margin-top: 2.2em;
+  padding: 1.3em 1.1em 0.85em;
   border-radius: 6px;
   color: var(--color-ink-soft);
 }
 
-.prose-blog blockquote > * + * {
-  margin-top: 0.6em;
+.prose-blog blockquote::before {
+  content: "❝";
+  position: absolute;
+  left: 0.5em;
+  top: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 1px solid var(--color-line);
+  background-color: var(--color-paper);
+  font-size: 1rem;
+  color: var(--color-ink-mute);
+  line-height: 1;
+  padding-top: 0.25em;
 }
 
 .prose-blog code {
@@ -178,7 +192,7 @@ body {
   border-radius: 10px;
   overflow-x: auto;
   font-size: 0.88em;
-  line-height: 1.6;
+  line-height: 1.45;
 }
 
 .prose-blog pre code {

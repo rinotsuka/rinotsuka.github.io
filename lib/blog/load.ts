@@ -44,5 +44,5 @@ export function getLatestPosts(limit = 3): PostSummary[] {
 }
 
 export function formatDate(d: string): string {
-  return d.replace(/-/g, ".");
+  return d.replace(/-/g, " - ");
 }
