@@ -8,9 +8,9 @@ export function loadCareer(): CareerEntry[] {
 
 export function formatYearMonth(ym: string): string {
   const [y, m] = ym.split("-");
-  return `${y}.${parseInt(m, 10)}`;
+  return `${y}.${m}`;
 }
 
 export function formatPeriod(start: string, end: string | null): string {
-  return `${formatYearMonth(start)} — ${end ? formatYearMonth(end) : "現在"}`;
+  return `${formatYearMonth(start)} - ${end ? formatYearMonth(end) : "現在"}`;
 }

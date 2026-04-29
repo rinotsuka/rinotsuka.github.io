@@ -90,35 +90,20 @@ function Rail({ dotKind, hideAbove, belowMode = "solid" }: RailProps) {
 function MetaLine({
   period,
   employment,
+  target,
   members,
-  methodology,
 }: {
   period: string;
   employment?: string;
+  target?: string[];
   members?: string;
-  methodology?: string;
 }) {
   return (
-    <div className="mt-1 flex flex-wrap gap-x-4 gap-y-0.5 text-xs text-ink-mute">
+    <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-ink-mute">
       <span>{period}</span>
       {employment && <span>{employment}</span>}
-      {members && <span>メンバー {members}</span>}
-      {methodology && <span>{methodology}</span>}
-    </div>
-  );
-}
-
-function TargetPills({ target }: { target: string[] }) {
-  return (
-    <div className="mb-2 flex flex-wrap gap-1.5">
-      {target.map((t, i) => (
-        <span
-          key={i}
-          className="rounded-full border border-ink-mute/40 px-2 py-0.5 text-xs text-ink-mute"
-        >
-          {t}
-        </span>
-      ))}
+      {target && target.length > 0 && <span>{target.join("・")}</span>}
+      {members && <span>{members}</span>}
     </div>
   );
 }
@@ -145,27 +130,17 @@ function ProjectRow({
         </h4>
         <MetaLine
           period={formatPeriod(project.start, project.end)}
+          target={project.target}
           members={project.members}
-          methodology={project.methodology}
         />
-        {project.target && project.target.length > 0 && (
-          <TargetPills target={project.target} />
+        {project.tech && project.tech.length > 0 && (
+          <p className="mt-2 text-xs leading-relaxed text-ink-mute">
+            {project.tech.join("・")}
+          </p>
         )}
         <p className="mt-2 text-sm leading-relaxed text-ink-soft">
           {project.summary}
         </p>
-        {project.duties && project.duties.length > 0 && (
-          <ul className="mt-2 list-disc space-y-0.5 pl-5 text-sm leading-relaxed text-ink-soft">
-            {project.duties.map((d, i) => (
-              <li key={i}>{d}</li>
-            ))}
-          </ul>
-        )}
-        {project.tech && project.tech.length > 0 && (
-          <p className="mt-2 text-xs leading-relaxed text-ink-mute">
-            {project.tech.join(" · ")}
-          </p>
-        )}
       </div>
     </li>
   );
