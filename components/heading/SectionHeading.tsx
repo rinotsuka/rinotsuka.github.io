@@ -42,12 +42,14 @@ function DottedArcs() {
 
 export function SectionHeading({ children }: { children: ReactNode }) {
   return (
-    <div className="flex w-full items-center justify-between gap-4 text-primary">
-      <DottedArcs />
-      <h2 className="shrink-0 text-2xl font-bold tracking-[0.15em] text-[#ee6f2b] md:text-3xl">
-        {children}
-      </h2>
-      <DottedArcs />
+    <div className="flex w-full justify-center overflow-hidden">
+      <div className="flex w-full min-w-[640px] items-center justify-between gap-4 text-primary md:min-w-[704px]">
+        <DottedArcs />
+        <h2 className="shrink-0 text-2xl font-bold tracking-[0.15em] text-[#ee6f2b]">
+          {children}
+        </h2>
+        <DottedArcs />
+      </div>
     </div>
   );
 }
