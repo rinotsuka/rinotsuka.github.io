@@ -4,20 +4,13 @@ import { formatDate } from "@/lib/blog/load";
 
 type Props = {
   post: PostSummary;
-  variant?: 1 | 2 | 3;
 };
 
-const RADIUS_BY_VARIANT: Record<1 | 2 | 3, string> = {
-  1: "rounded-blob",
-  2: "rounded-blob-2",
-  3: "rounded-blob-3",
-};
-
-export function PostCard({ post, variant = 1 }: Props) {
+export function PostCard({ post }: Props) {
   return (
     <Link
       href={`/blog/${post.slug}/`}
-      className={`group block ${RADIUS_BY_VARIANT[variant]} border border-line bg-paper p-6 shadow-card transition hover:-translate-y-0.5 hover:shadow-soft`}
+      className="group block rounded-2xl bg-paper p-6 transition hover:-translate-y-0.5"
     >
       <div className="flex items-center gap-2 text-xs text-ink-mute">
         <time dateTime={post.date}>{formatDate(post.date)}</time>

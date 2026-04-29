@@ -24,12 +24,8 @@ export default function BlogIndexPage() {
           <p className="text-ink-soft">まだ記事がありません。</p>
         ) : (
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-            {posts.map((post, i) => (
-              <PostCard
-                key={post.slug}
-                post={post}
-                variant={((i % 3) + 1) as 1 | 2 | 3}
-              />
+            {posts.map((post) => (
+              <PostCard key={post.slug} post={post} />
             ))}
           </div>
         )}
