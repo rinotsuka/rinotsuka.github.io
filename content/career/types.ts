@@ -3,10 +3,12 @@ export type CareerProject = {
   start: string;
   end: string | null;
   name: string;
-  roles: string[];
-  summary: string;
   members?: string;
+  methodology?: string;
+  target?: string[];
+  duties?: string[];
   tech?: string[];
+  summary: string;
 };
 
 export type CareerEntry = {
@@ -14,10 +16,8 @@ export type CareerEntry = {
   start: string;
   end: string | null;
   company: string;
-  roles: string[];
+  employment?: string;
   summary: string;
-  members?: string;
-  tech?: string[];
   projects?: CareerProject[];
 };
 

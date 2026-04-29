@@ -1,78 +1,49 @@
 {
   "entries": [
     {
-      "id": "sample-fintech",
-      "start": "2024-04",
+      "id": "carrier-payment-2024",
+      "start": "2024-10",
       "end": null,
-      "company": "サンプル株式会社（フィンテック）",
-      "roles": ["Backend Engineer", "テックリード"],
-      "summary": "決済プラットフォームの API 開発・運用を担当。新機能設計から本番運用まで一気通貫で推進。",
-      "members": "8名 / Scrum",
-      "tech": ["TypeScript", "Node.js", "AWS", "PostgreSQL", "Terraform"],
+      "company": "キャリア キャッシュレス決済アプリのWeb画面",
+      "employment": "業務委託",
+      "summary": "キャリア系キャッシュレス決済アプリの Web 画面開発に従事。積極的な発言とチームビルディングへの貢献を通じて、技術的な意思決定をリード。開発で解決できる問題は開発側で完結させる文化を徹底し、PO への過度な依存を抑えつつ、PO とのコミュニケーション機会を増やして要件と実装のすり合わせを円滑化した。",
       "projects": [
         {
-          "id": "fintech-payment-api",
-          "start": "2025-04",
-          "end": null,
-          "name": "新決済 API リプレース",
-          "roles": ["テックリード", "バックエンド設計"],
-          "summary": "既存決済 API のマイクロサービス化を主導し、応答時間 30% 短縮。",
-          "members": "5名",
-          "tech": ["TypeScript", "Node.js", "AWS", "Terraform"]
-        },
-        {
-          "id": "fintech-dashboard",
-          "start": "2024-04",
-          "end": "2025-03",
-          "name": "加盟店ダッシュボード新規開発",
-          "roles": ["フルスタック"],
-          "summary": "加盟店向け管理画面と分析基盤を新規構築。0→1 の機能設計を担当。",
-          "members": "3名",
-          "tech": ["Next.js", "TypeScript", "PostgreSQL"]
-        }
-      ]
-    },
-    {
-      "id": "sample-saas",
-      "start": "2022-01",
-      "end": "2024-03",
-      "company": "サンプル B2B SaaS",
-      "roles": ["Full Stack Engineer"],
-      "summary": "業務 SaaS のフロント／バック横断開発。マイクロサービス分割を主導。",
-      "members": "5名",
-      "tech": ["TypeScript", "Next.js", "Go", "GCP", "MySQL"],
-      "projects": [
-        {
-          "id": "saas-microservice",
-          "start": "2023-04",
-          "end": "2024-03",
-          "name": "マイクロサービス分割",
-          "roles": ["設計リード", "バックエンド"],
-          "summary": "モノリスを 3 サービスに分割し移行を完了。CI/CD パイプラインも整備。",
+          "id": "carrier-payment-customer-site",
+          "start": "2024-10",
+          "end": "2026-05",
+          "name": "顧客向けサイトのリプレイス",
           "members": "4名",
-          "tech": ["Go", "GCP", "MySQL"]
+          "target": ["BtoC"],
+          "duties": ["フロントエンド"],
+          "tech": [
+            "仕様駆動開発",
+            "TypeScript",
+            "Next.js",
+            "Tailwind",
+            "Vitest",
+            "Playwright"
+          ],
+          "summary": "ベンダーが Nuxt で構築した顧客向けサイトを Next.js へリプレイスする案件。仕様駆動開発の技術選定、事前の概算見積もり、要件整理、サーバー構成・ツール選定から実装までを主導。既存 2 チーム体制から 3 チームへ増強する際のメンバー選任にも協力。評価対象案件のため、自身とジュニアエンジニア 2 名・SM 1 名の 4 名体制で進めた。"
         },
         {
-          "id": "saas-frontend",
-          "start": "2022-01",
-          "end": "2023-03",
-          "name": "管理画面リニューアル",
-          "roles": ["フロントエンド"],
-          "summary": "Next.js への移行と UX 改善を担当。",
-          "members": "3名",
-          "tech": ["Next.js", "TypeScript"]
+          "id": "carrier-payment-cashless-web",
+          "start": "2024-10",
+          "end": "2026-05",
+          "name": "キャッシュレス決済Web画面",
+          "members": "9名",
+          "target": ["BtoC"],
+          "duties": ["フロントエンド"],
+          "tech": [
+            "TypeScript",
+            "Next.js",
+            "vanilla-extract",
+            "Vitest",
+            "GitHub Actions"
+          ],
+          "summary": "Laravel からのリプレイスとして、フロントエンドの技術選定・設計・実装をリード。プリンシパルエンジニアとしてチームを率い、初リリース、新規案件対応、案件の見積もり・調整までを担当。新規参画者と新卒への教育にも携わり、新卒のロールモデルになったとの評価を得た（本人談）。発注先部長や参画先副社長から評価され、「中山さんがいるなら安心」と言われるなど信頼獲得につながった。"
         }
       ]
-    },
-    {
-      "id": "sample-startup",
-      "start": "2020-04",
-      "end": "2021-12",
-      "company": "サンプルスタートアップ",
-      "roles": ["Web Engineer"],
-      "summary": "シード期スタートアップで MVP のフロント開発から運用まで担当。",
-      "members": "3名",
-      "tech": ["JavaScript", "Vue.js", "Firebase"]
     }
   ]
 }

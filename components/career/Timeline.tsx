@@ -89,15 +89,36 @@ function Rail({ dotKind, hideAbove, belowMode = "solid" }: RailProps) {
 
 function MetaLine({
   period,
+  employment,
   members,
+  methodology,
 }: {
   period: string;
+  employment?: string;
   members?: string;
+  methodology?: string;
 }) {
   return (
     <div className="mt-1 flex flex-wrap gap-x-4 gap-y-0.5 text-xs text-ink-mute">
       <span>{period}</span>
+      {employment && <span>{employment}</span>}
       {members && <span>メンバー {members}</span>}
+      {methodology && <span>{methodology}</span>}
+    </div>
+  );
+}
+
+function TargetPills({ target }: { target: string[] }) {
+  return (
+    <div className="mb-2 flex flex-wrap gap-1.5">
+      {target.map((t, i) => (
+        <span
+          key={i}
+          className="rounded-full border border-ink-mute/40 px-2 py-0.5 text-xs text-ink-mute"
+        >
+          {t}
+        </span>
+      ))}
     </div>
   );
 }
@@ -125,15 +146,21 @@ function ProjectRow({
         <MetaLine
           period={formatPeriod(project.start, project.end)}
           members={project.members}
+          methodology={project.methodology}
         />
-        {project.roles.length > 0 && (
-          <p className="mt-1 text-sm text-ink-soft">
-            {project.roles.join(" / ")}
-          </p>
+        {project.target && project.target.length > 0 && (
+          <TargetPills target={project.target} />
         )}
         <p className="mt-2 text-sm leading-relaxed text-ink-soft">
           {project.summary}
         </p>
+        {project.duties && project.duties.length > 0 && (
+          <ul className="mt-2 list-disc space-y-0.5 pl-5 text-sm leading-relaxed text-ink-soft">
+            {project.duties.map((d, i) => (
+              <li key={i}>{d}</li>
+            ))}
+          </ul>
+        )}
         {project.tech && project.tech.length > 0 && (
           <p className="mt-2 text-xs leading-relaxed text-ink-mute">
             {project.tech.join(" · ")}
@@ -199,7 +226,10 @@ function CompanyItem({
               <h3 className="text-lg font-bold leading-snug text-ink md:text-xl">
                 {entry.company}
               </h3>
-              <MetaLine period={formatPeriod(entry.start, entry.end)} />
+              <MetaLine
+                period={formatPeriod(entry.start, entry.end)}
+                employment={entry.employment}
+              />
             </div>
             <svg
               aria-hidden
@@ -234,12 +264,7 @@ function CompanyItem({
             </div>
             <Rail dotKind="line" belowMode={detailBelowMode} />
             <div className="pb-8">
-              {entry.roles.length > 0 && (
-                <p className="text-sm text-ink-soft">
-                  {entry.roles.join(" / ")}
-                </p>
-              )}
-              <p className="mt-2 text-[15px] leading-relaxed text-ink">
+              <p className="text-[15px] leading-relaxed text-ink">
                 {entry.summary}
               </p>
             </div>
