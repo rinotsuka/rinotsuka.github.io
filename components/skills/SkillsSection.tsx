@@ -23,14 +23,14 @@ function IconRow({
 }) {
   return (
     <div className={className}>
-      <ul className="flex w-max items-center gap-36 text-[#B0A595] animate-marquee motion-reduce:animate-none">
+      <ul className="flex w-max items-center gap-20 text-[#B0A595] animate-marquee motion-reduce:animate-none sm:gap-36">
         {icons.map((icon, i) => (
           <li key={i} className="shrink-0">
             <svg
               viewBox="0 0 24 24"
               role="img"
               aria-label={icon.name}
-              className="h-12 w-12"
+              className="h-8 w-8 sm:h-12 sm:w-12"
               fill="currentColor"
             >
               <path d={icon.path} />
@@ -46,11 +46,11 @@ export function SkillsSection() {
   return (
     <section
       id="skills"
-      className="overflow-hidden bg-[#fffef2] py-12"
+      className="overflow-hidden bg-[#fffef2] py-8 sm:py-12"
     >
-      <div className="space-y-12">
+      <div className="space-y-8 sm:space-y-12">
         <IconRow icons={ROW_A} />
-        <IconRow icons={ROW_B} className="-ml-24" />
+        <IconRow icons={ROW_B} className="-ml-14 sm:-ml-24" />
       </div>
     </section>
   );
