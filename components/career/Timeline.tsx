@@ -155,7 +155,7 @@ function CompanyItem({
   isFirstCompany: boolean;
   isLastCompany: boolean;
 }) {
-  const [open, setOpen] = useState(isFirstCompany);
+  const [open, setOpen] = useState(false);
 
   const projects = (entry.projects ?? [])
     .slice()

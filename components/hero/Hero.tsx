@@ -3,7 +3,7 @@ import { Blob } from "@/components/decor/Blob";
 
 export function Hero({ title }: { title?: ReactNode } = {}) {
   return (
-    <section className="relative isolate flex items-center justify-center overflow-hidden bg-primary-soft min-h-[128px] pb-2">
+    <section className="relative isolate flex items-center justify-center overflow-hidden bg-primary-soft min-h-[150px] pt-9 pb-4 sm:min-h-[128px] sm:pt-0 sm:pb-2">
       <Blob
         variant={2}
         fill="#ffe9cf"
@@ -25,10 +25,10 @@ export function Hero({ title }: { title?: ReactNode } = {}) {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.55),_transparent_55%)]"
       />
       <div className="relative mx-auto flex max-w-content flex-col items-center justify-center px-4 text-center">
-        <h1 className="font-handwritten text-[26px] font-bold leading-[1.6] tracking-[0.2em] text-[#796B62]">
+        <h1 className="font-handwritten text-[22px] font-bold leading-[1.3] tracking-[0.2em] text-[#796B62] sm:text-[26px] sm:leading-[1.6]">
           {title ?? (
             <>
-              えんじにあ<br className="sm:hidden" /> <span className="text-[20px]">no</span> <br className="sm:hidden" />ぽーとふぉりお
+              えんじにあ<br className="sm:hidden" /> <span className="text-[17px] sm:text-[20px]">no</span> <br className="sm:hidden" />ぽーとふぉりお
             </>
           )}
         </h1>
