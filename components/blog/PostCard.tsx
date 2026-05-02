@@ -10,7 +10,7 @@ export function PostCard({ post }: Props) {
   return (
     <Link
       href={`/blog/${post.slug}/`}
-      className="group block rounded-2xl bg-paper p-6 transition hover:-translate-y-0.5"
+      className="group block rounded-2xl bg-paper transition hover:-translate-y-0.5"
     >
       <div className="flex items-center gap-2 text-xs text-ink-mute">
         <time dateTime={post.date}>{formatDate(post.date)}</time>
