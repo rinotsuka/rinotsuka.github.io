@@ -39,10 +39,6 @@ export function getPost(slug: string): Post | null {
   return readPostFile(slug);
 }
 
-export function getLatestPosts(limit = 3): PostSummary[] {
-  return getAllPosts().slice(0, limit);
-}
-
 export function formatDate(d: string): string {
   return d.replace(/-/g, " - ");
 }
